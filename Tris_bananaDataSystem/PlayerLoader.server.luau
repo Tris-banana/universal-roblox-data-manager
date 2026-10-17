@@ -12,13 +12,9 @@ local closingTime = 3
 
 --set data and default run speed
 players.PlayerAdded:Connect(function(player)
-	--create leaderstats folder
-	local leaderstats = Instance.new("Folder")
-	leaderstats.Name = "leaderstats"
-	leaderstats.Parent = player
-
 	--load saved data
 	local data = DataManager.loadData(player)
+	local leaderstats = player:WaitForChild("leaderstats")
 	
 	--stat/attribute listeners trigger stat manager
 	for _, stat in pairs(leaderstats:GetChildren()) do
