@@ -160,6 +160,11 @@ end
 --loaders
 --retrieve saved data
 function DataManager.loadData(player: Player): PlayerStats
+	--create leaderstats folder
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = player
+	
 	local savedData: PlayerStats? = nil
 
 	--wait for player to exist or leave the game
