@@ -288,7 +288,6 @@ end
 function DataManager.removePlayer(player: Player)
 	if sessionData[player] then
 		DataManager.saveData(player) --save
-		print(sessionData[player])
 	end
 	sessionData[player] = nil --remove player data
 end
